@@ -1791,7 +1791,7 @@ ul.listing-style.modify li:before {
   z-index: 9;
 }
 .full-width-header .rs-header .logo-part img {
-  max-height: 40px;
+  max-height: 120px !important;
 }
 .full-width-header .rs-header .menu-area {
   transition: all 0.3s ease;
@@ -14180,7 +14180,7 @@ body .modal-backdrop {
   display: inline-block;
 }
 .rs-footer .footer-bottom .footer-logo a img {
-  max-width: 190px;
+  max-width: 300px;
 }
 .rs-footer .footer-bottom .footer-social li {
   display: inline;

@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
+import { HistoryComponent } from './history/history.component';
+import { BasicRoutes } from './basic.routing';
 import { RouterModule } from '@angular/router';
-import { HomeRoutes } from './home.routing';
 import { SharedModule } from '../shared/shared.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HistoryComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(HomeRoutes),
-    SharedModule,
-    NgbModule
+    RouterModule.forChild(BasicRoutes),
+    SharedModule
   ]
 })
-export class HomeModule { }
+export class BasicModule { }
