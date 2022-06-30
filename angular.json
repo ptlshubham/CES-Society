@@ -40,7 +40,9 @@
               "src/assets/css/rsmenu-main.css",
               "src/assets/css/rs-spacing.css",
               "src/assets/css/style.css",
-              "src/assets/css/responsive.css"
+              "src/assets/css/responsive.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css"
             ],
             "scripts": [
               "src/assets/js/modernizr-2.8.3.min.js",
@@ -53,6 +55,7 @@
               "src/assets/js/jquery.magnific-popup.min.js",
               "src/assets/js/contact.form.js",
               "src/assets/js/main.js"
+
             ]
           },
           "configurations": {
@@ -131,7 +134,10 @@
               "src/assets/css/rsmenu-main.css",
               "src/assets/css/rs-spacing.css",
               "src/assets/css/style.css",
-              "src/assets/css/responsive.css"
+              "src/assets/css/responsive.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css"
+
             ],
             "scripts": [
               "src/assets/js/modernizr-2.8.3.min.js",
@@ -144,6 +150,7 @@
               "src/assets/js/jquery.magnific-popup.min.js",
               "src/assets/js/contact.form.js",
               "src/assets/js/main.js"
+              
             ]
           }
         }

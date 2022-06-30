@@ -1487,8 +1487,8 @@ ul.listing-style.modify li:before {
 }
 .full-width-header .rs-header .topbar-area .topbar-contact li {
   display: inline-block;
-  line-height: 50px;
-  height: 50px;
+  line-height: 30px;
+  height: 30px;
   margin-right: 17px;
   padding-right: 20px;
   color: #ffffff;
@@ -1502,7 +1502,7 @@ ul.listing-style.modify li:before {
   position: relative;
 }
 .full-width-header .rs-header .topbar-area .topbar-contact li i:before {
-  font-size: 16px;
+  font-size: 12px;
   color: #ffffff;
 }
 .full-width-header .rs-header .topbar-area .topbar-contact li a {

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HomeRoutes } from './home.routing';
 import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -16,7 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     RouterModule.forChild(HomeRoutes),
     SharedModule,
-    NgbModule
+    NgbModule,
+    CarouselModule
   ]
 })
 export class HomeModule { }
