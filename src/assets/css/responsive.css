@@ -276,6 +276,7 @@
     .full-width-header.header-style1 .rs-header .menu-area .main-menu .rs-menu .rs-mega-menu .mega-menu {
         right: -50px;
     }
+
     .full-width-header.header-style3.home-style15 .rs-header .menu-area .custom-table .header-logo .custom-logo-area a img {
         max-height: 40px;
     }
@@ -1821,7 +1822,7 @@
 
     .full-width-header.home1-modifiy .rs-header .logo-part {
         position: absolute;
-        line-height: 90px;
+        line-height: 77px;
         height: 90px;
     }
     .full-width-header.home8-style4 .rs-header .menu-area .logo-part {
@@ -2626,7 +2627,10 @@
     .rs-about.video-style .about-content {
         padding: 30px
     }
-
+    iframe{
+        height: 310px !important;
+        width: 310px !important;
+    }
     .rs-cta .cta-img img {
         min-height: 350px;
     }

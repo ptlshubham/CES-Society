@@ -9,7 +9,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

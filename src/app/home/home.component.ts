@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   showNavigationArrows = true;
   showNavigationIndicators = true;
   readMore=false;
-  images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/1920/500`);
+  images = [1055, 194, 368].map((n) => `http://www.cesociety.in/images/slider/slide%205.jpg`);
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

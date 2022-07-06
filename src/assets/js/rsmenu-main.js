@@ -95,7 +95,7 @@ $(document).ready(function () {
 			$(this).removeClass('rs-menu-toggle-close').addClass('rs-menu-toggle-open');
 			$('.rs-menu').animate({height:menu_height},{queue:false, duration:300}).removeClass('rs-menu-close');
 		}
-	});	
+	});		
 	
 	/*-----------------------------------------------------------------------------------*/
 	/*	CLOSE MENUS ON RESIZE
