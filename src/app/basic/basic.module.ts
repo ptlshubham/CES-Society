@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AboutComponent } from './about/about.component';
 import { ManagementComponent } from './management/management.component';
 import { FundComponent } from './fund/fund.component';
+import { AlumniComponent } from './alumni/alumni.component';
 
 
 
@@ -16,7 +17,8 @@ import { FundComponent } from './fund/fund.component';
     HistoryComponent,
     AboutComponent,
     ManagementComponent,
-    FundComponent
+    FundComponent,
+    AlumniComponent
   ],
   imports: [
     CommonModule,
