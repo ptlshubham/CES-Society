@@ -1996,7 +1996,7 @@ ul.listing-style.modify li:before {
   background: #ff5421;
 }
 .full-width-header .rs-header .menu-area .nav-expander.style3 span {
-  background: #111111;
+  background: #fff;
 }
 .full-width-header .rs-header .menu-area .nav-expander.style3:hover span {
   background: #21a7d0;
