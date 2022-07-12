@@ -6,12 +6,10 @@ import { AppRoutes } from './app.routing';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ProjectComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
