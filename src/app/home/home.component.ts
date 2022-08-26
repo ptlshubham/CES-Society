@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class HomeComponent implements OnInit {
   showNavigationArrows = true;
   showNavigationIndicators = true;
-  readMore=false;
+  readMore = false;
   images = [1055, 194, 368].map((n) => `http://www.cesociety.in/images/slider/slide%205.jpg`);
   customOptions: OwlOptions = {
     loop: true,
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     navText: ['Previous', 'Next'],
     responsive: {
       0: {
-        items: 1 
+        items: 1
       },
       400: {
         items: 2
@@ -36,26 +36,20 @@ export class HomeComponent implements OnInit {
     nav: false
   }
 
-  projectCount:number=0;
-  projectCountStop:any= setInterval(()=>{
-    this.projectCount++;
-    if(this.projectCount==284){
-      clearInterval(this.projectCountStop);
-    }
-  },80)
+
 
   constructor(
     config: NgbCarouselConfig
   ) {
-        // customize default values of carousels used by this component tree
-        config.showNavigationArrows = true;
-        config.showNavigationIndicators = true;
-        this.readMore=false;
-   }
+    // customize default values of carousels used by this component tree
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = true;
+    this.readMore = false;
+  }
 
   ngOnInit(): void {
   }
-  moreOpen(){
-    this.readMore=true;
+  moreOpen() {
+    this.readMore = true;
   }
 }
