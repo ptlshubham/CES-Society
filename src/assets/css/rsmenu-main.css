@@ -90,6 +90,7 @@ Version: 1.0.0
    border: 0;
    margin: 0;
    padding: 0;
+   margin-top: 6.5px;
 }
 
 .rs-menu li {
@@ -128,7 +129,7 @@ Version: 1.0.0
 }
 .rs-header .menu-area .main-menu .rs-menu ul.nav-menu li a {
   transition: all 0.3s ease 0s;
-  font-family: 'Rubik', sans-serif;
+ font-family: 'Nunito', sans-serif;
   font-size: 16px;
   text-transform: capitalize;
   height: 96px;
@@ -158,7 +159,7 @@ Version: 1.0.0
 /* Hide sub-menus */
 .rs-menu ul ul {
 	position: absolute;
-	top: 71%;
+	top: 500%;
 	width: 100%;
 	background-color: #111111; 
 }
@@ -604,6 +605,7 @@ Version: 1.0.0
 
 	.rs-header .menu-area .main-menu .rs-menu ul.nav-menu {
 		background: #fff;
+		display: none;
 	}
 	.rs-header .menu-area .main-menu .rs-menu ul.nav-menu li {
 		display: block !important;

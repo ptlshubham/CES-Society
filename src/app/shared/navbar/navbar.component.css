@@ -1,0 +1,124 @@
+
+header.navbar-sticky-on,
+.carososel-sticky{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    -webkit-animation: fadeInDown .5s;
+    animation: fadeInDown .5s;
+    width: 100%;
+    box-shadow: 0px 0px 40px rgba(83, 88, 93, 0.2);
+}
+
+.lm{
+    display: inline;
+    color: black;
+}
+a{
+    color: black;
+}
+
+.secondToolbar {
+    position: fixed;
+    top: 0;
+    height: 0;
+    opacity: 0;
+    transition: opacity .25s ease-out, height .15s ease;
+    cursor: default;
+    user-select: none;
+    background-color: #203154 !important;
+  }
+  
+  .sticky {
+    opacity: 1;
+    transition: opacity .25s ease-out, height .15s ease;
+  }
+
+  .jc{
+    margin-left: -110px;
+  }
+
+  .search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid #203154;
+    border-right: none;
+    padding: 5px;
+    height: 36.5px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #203154;
+  }
+  
+  .searchTerm:focus{
+    color: #203154;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #203154;
+    background: #203154;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 37%;
+    position: absolute;
+    top: 50%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+  }
+  .btn-group, .btn-group-vertical{
+    display: block !important;
+  }
+  .btn-group-lg>.btn, .btn-lg{
+    font-size: 15px;
+  }
+  .nav-menu > li > a{
+    border: none;
+  }
+  @media only screen and (max-width: 991px){
+    .m1{
+      display: none;
+    }
+    .y-middle{
+      background-color: #ffffff !important;
+     height: 20px !important;
+    }
+    .text-end{
+      text-align: center !important;
+    }
+    .navn{
+      display: none;
+    }
+  }
+  .navbar-light .navbar-toggler{
+    border-color: transparent !important;
+  }
+  /* .collapse:not(.show){
+    display: block;
+  } */
+  /* @media only screen and (max-width: 1196px){
+    .navbarn{
+        display: block !important;
+    }
+} */
+@media only screen and (min-width: 980px){
+    .navbarn{
+        display: none !important;
+    }
+}

@@ -143,7 +143,8 @@
     }
 
     .full-width-header .rs-header .logo-part img {
-        max-height: 35px;
+        max-height: 60px !important;
+        margin-top: 0px
     }
     .full-width-header.header-style3 .rs-header .menu-area .menu-bg::before {
         left: 65%;
@@ -380,7 +381,7 @@
     .full-width-header.header-style3.home-style15 .rs-header .menu-area .custom-table .header-logo .custom-logo-area {
         position: absolute;
         top: -1px;
-        background: #ff5421;
+        background: #d72b32;
         padding: 27px 35px 27px 22px;
         left: 0;
     }
@@ -388,7 +389,7 @@
         right: -175px;
         margin: 0 auto;
         max-width: 800px;
-        background: #ff5421 !important;
+        background: #d72b32 !important;
     }
     .full-width-header .rs-header .topbar-area.home11-topbar.modify1.home15-style {
         padding-left: 13px;
@@ -1290,7 +1291,7 @@
         margin-bottom: 8px;
     }
     .full-width-header.header-style3.home-style15 .rs-header .menu-area .custom-table .rs-menu-area .main-menu .rs-menu ul.sub-menu li a:hover {
-        color: #ff5421 !important;
+        color: #d72b32 !important;
     }
     .rs-banner.style13 {
         padding: 100px 0px 0px 0px;

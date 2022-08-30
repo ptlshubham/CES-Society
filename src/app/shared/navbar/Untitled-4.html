@@ -1,0 +1,159 @@
+<div class="full-width-header header-style1 home1-modifiy">
+    <header id="rs-header" class="rs-header">
+        <div class="topbar-area dark-parimary-bg">
+            <div class="container">
+                <div class="row y-middle">
+                    <div class="col-md-7">
+                        <ul class="topbar-contact">
+                            <li>
+                                <i class="flaticon-email"></i>
+                                <a href="mailto:cesociety@cesociety.in" style="font-size:12px !important;">
+                                    cesociety@cesociety.in</a>
+                            </li>
+                            <li>
+                                <i class="flaticon-phone"></i>
+                                <a href="tel:02692-243083" style="font-size:12px !important;"> (02692) 243083</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 text-end">
+                        <ul class="topbar-right">
+                            <li class="login-register" style="font-size:12px !important;">
+                                <i class="fa fa-clock-o"></i>
+                                <a href="">Last Updated:27-june-2022</a>
+                            </li>
+                            <li class="login-register" style="font-size:12px !important;">
+                                <i class="fa fa-users"></i>
+                                <a href="">Visitor:222500</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row y-middle">
+            <div class="col-lg-7 col-md-12 col-sm-12">
+                <div class="logo-cat-wrap">
+                    <div class="logo-part">
+                        <a href="index.html">
+                            <img src="assets/images/CES_logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 text-end m1">
+
+                <ul class="topbar-right">
+                    <li class="menu-item lm">
+                        <div class="wrap">
+                            <div class="search">
+                                <input type="text" class="searchTerm" placeholder="What are you looking for?"
+                                    style="color: #203154;">
+                                <button type="submit" class="searchButton">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="menu-item lm">
+                        <a href="#">Centenary Celebration</a>
+                    </li>
+                    |
+                    <li class="menu-item lm">
+                        <a href="#">News</a>
+                    </li>
+                    |
+                    <li class="menu-item lm">
+                        <a href="#">Birthday</a>
+                    </li>
+                    |
+                    <li class="menu-item lm">
+                        <a href="#">Free counseling</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
+                (click)="isCollapsed = !isCollapsed">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
+                <ul class="nav-menu">
+
+                    <li class="menu-item-has-children">
+                        <a routerLink="/landing/main" routerLinkActive="active">Home</a>
+                        <ul class="sub-menu">
+                            <li><a routerLink="/basic/about" routerLinkActive="active">About Us</a> </li>
+                            <li><a routerLink="/basic/history" routerLinkActive="active">History</a> </li>
+                            <li><a routerLink="/basic/management" routerLinkActive="active">Management</a> </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href="#">Glory of CES</a>
+                        <ul class="sub-menu">
+                            <li><a routerLink="/glory/old" routerLinkActive="active">Old Gallery</a> </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href="#">Gallery/Media</a>
+
+                        <ul class="sub-menu">
+                            <li><a href="#">Photos</a> </li>
+                            <li><a href="#">Documentary Film</a> </li>
+                            <li><a href="#">Our Magazine Balmitra</a> </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href="#">Project</a>
+                        <ul class="sub-menu">
+                            <li><a routerLink="/project/setu" routerLinkActive="active">Project SETU</a> </li>
+                            <li><a routerLink="/project/sangam" routerLinkActive="active">Project SANGAM</a> </li>
+                            <li><a routerLink="/project/sandesh" routerLinkActive="active">Project SANDESH</a> </li>
+                            <li><a routerLink="/project/aditya" routerLinkActive="active">Project ADITYA</a> </li>
+                            <li><a routerLink="/project/varun" routerLinkActive="active">Project VARUN</a> </li>
+                            <li><a routerLink="/project/eklavya" routerLinkActive="active">Project EKLAVYA</a> </li>
+                            <li><a routerLink="/project/egyan" routerLinkActive="active">Project E-GYAN</a> </li>
+                            <li><a routerLink="/project/arjun" routerLinkActive="active">Project ARJUN</a> </li>
+                            <li><a routerLink="/project/anandam" routerLinkActive="active">Project ANANDAM</a> </li>
+                        </ul>
+
+                    </li>
+
+                    <li class="menu-item-has-children">
+                        <a href="contact.html">Academic</a>
+                        <ul class="sub-menu">
+                            <li><a routerLink="/academic/school" routerLinkActive="active">Schools</a> </li>
+                            <li><a routerLink="/academic/colleges" routerLinkActive="active">Collages</a> </li>
+                            <li><a routerLink="/academic/others" routerLinkActive="active">Others</a> </li>
+                            <li><a routerLink="/academic/hostels" routerLinkActive="active">Hostels</a> </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a routerLink="/basic/alumni" routerLinkActive="active">Alumani</a>
+                    </li>
+                    <li class="">
+                        <a routerLink="/basic/fund" routerLinkActive="active">Rahatotkarsh Fund</a>
+                    </li>
+                </ul> 
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+</div>
