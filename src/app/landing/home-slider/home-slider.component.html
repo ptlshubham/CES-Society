@@ -13,13 +13,13 @@
             </ng-template>
         </ngb-carousel> -->
         <ngb-carousel [showNavigationArrows]="true" [showNavigationIndicators]="true" [interval]="2000"
-            [keyboard]="true" [pauseOnHover]="true" [wrap]="true" [activeId]="'slideTwo'" class="carousel">
-            <ng-template ngbSlide>
+            [keyboard]="true" [pauseOnHover]="true" [wrap]="true" [activeId]="'slideTwo'">
+            <ng-template ngbSlide *ngFor="let item of imageUploader; let i=index">
                 <div class="picsum-img-wrapper">
-                    <img src="./assets/images/slider/1.jpg" alt="Random first slide">
+                    <img src="http://localhost:8100{{item.image}}" alt="Random first slide">
                 </div>
             </ng-template>
-            <ng-template ngbSlide>
+            <!-- <ng-template ngbSlide>
                 <div class="picsum-img-wrapper">
                     <img src="./assets/images/slider/2.jpg" alt="Random first slide">
                 </div>
@@ -28,7 +28,7 @@
                 <div class="picsum-img-wrapper">
                     <img src="./assets/images/slider/3.jpg" alt="Random first slide">
                 </div>
-            </ng-template>
+            </ng-template> -->
         </ngb-carousel>
     </div>
 </div>
