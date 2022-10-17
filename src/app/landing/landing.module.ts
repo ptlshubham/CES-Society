@@ -12,6 +12,10 @@ import { AcademicCategoriesComponent } from './academic-categories/academic-cate
 import { SectionMessageComponent } from './section-message/section-message.component';
 import { SectionCourseComponent } from './section-course/section-course.component';
 import { CompetitionCertificateComponent } from './competition-certificate/competition-certificate.component';
+import { HomeBannerComponent } from './home-banner/home-banner.component';
+import { ImageTextComponent } from './image-text/image-text.component';
+import { TextImageComponent } from './text-image/text-image.component';
+import { NewsMessageComponent } from './news-message/news-message.component';
 
 
 
@@ -24,6 +28,10 @@ import { CompetitionCertificateComponent } from './competition-certificate/compe
     SectionMessageComponent,
     SectionCourseComponent,
     CompetitionCertificateComponent,
+    HomeBannerComponent,
+    ImageTextComponent,
+    TextImageComponent,
+    NewsMessageComponent,
   ],
   imports: [
     CommonModule,

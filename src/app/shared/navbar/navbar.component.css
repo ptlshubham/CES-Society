@@ -79,7 +79,7 @@ a{
     width: 37%;
     position: absolute;
     top: 50%;
-    left: 14%;
+    left: -17%;
     transform: translate(-50%, -50%);
   }
   .btn-group, .btn-group-vertical{
@@ -91,6 +91,20 @@ a{
   .nav-menu > li > a{
     border: none;
   }
+  .navbar{
+    padding-top: 1.5rem;
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }
+  .navbar-light .navbar-toggler-icon {
+    background-image: none !important;
+}
+.navbar-toggler-icon {
+  width: 1.7em;
+    height: 1.7em;
+    padding: 0px;
+}
   @media only screen and (max-width: 991px){
     .m1{
       display: none;
@@ -103,6 +117,15 @@ a{
       text-align: center !important;
     }
     .navn{
+      display: none;
+    }
+    .full-width-header.header-style1{
+      position: fixed;
+    }
+    .secondToolbar{
+      display: none;
+    }
+    .y-middle{
       display: none;
     }
   }
@@ -122,3 +145,54 @@ a{
         display: none !important;
     }
 }
+
+.card1{
+  margin: 30px;
+  background-color: #203154;
+    font-family: calibri, 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 25px;
+    border-radius: 10px;
+    color: white;
+}
+
+.fa{
+  padding-right: 5px;
+}
+.white{
+  color: white;
+}
+
+
+
+
+.modal .modal-frame {
+  position: absolute;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+.modal .modal-side {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 400px;
+  margin: 0;
+}
+
+.modal .modal-left {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 400px;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+

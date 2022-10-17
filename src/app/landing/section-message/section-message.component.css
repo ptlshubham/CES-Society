@@ -1,4 +1,3 @@
-
 .servicesHome {
 width: 100%;
 display: block;
@@ -7,6 +6,7 @@ padding-top: 0px;
 background-attachment: fixed;
 background-size: cover;
 padding-bottom: 0px;
+/* margin-bottom: -81px; */
 }
 .container-fluid, .container-xl {
 width: 100%;
@@ -17,7 +17,7 @@ margin-left: auto;
 }
 .servicesHome-box {
 text-align: center;
-padding: 85px 45px;
+padding: 44px 45px;
 }
 servicesHome-box h2, .servicesHome-box p {
 color: #fff;
@@ -125,6 +125,7 @@ section {
 .video-section {
     width: 100%;
     height: 100%;
+    /* padding-top: 50px; */
 }
 .video-content {
     position: relative;
@@ -133,7 +134,7 @@ section {
 }
 .video-section img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 @media (min-width: 768px){
 .col-md-4 {
@@ -311,7 +312,7 @@ div#button-container .btn .pillbtn {
         font-size: 16px;
     }
     .servicesHome-box {
-        padding: 10px;
+        padding: 20px;
     }
     .namo .namo-quote h3 {
         font-size: 21px;

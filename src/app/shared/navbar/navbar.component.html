@@ -1,3 +1,67 @@
+<div id="accordion" class="accordion">
+    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+        <section class="servicesHome">
+            <div class="container">
+
+
+                <div class="row card1">
+                    <a data-toggle="collapse" data-bs-parent="#accordion" data-bs-toggle="collapse" href="#collapseTwo">
+                        <i class="fa fa-times-circle" style="float: right; color: white; font-size:24px"></i></a>
+                    <div class="col-md-3">
+                        <div class="servicesHome-box">
+                            <ul>
+                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/school"
+                                        routerLinkActive="active"> Preschool</a></li>
+                                <li><i class="fa fa-check-square"></i> Standard 11 to 12</li>
+                                <li><i class="fa fa-check-square"></i> B.Com.</li>
+                                <li><i class="fa fa-check-square"></i> B.Sc.</li>
+                                <li><i class="fa fa-check-square"></i> M.Ed.</li>
+                                <li><i class="fa fa-check-square"></i> Ph.D.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="servicesHome-box">
+                            <ul style="color:white">
+                                <li><i class="fa fa-check-square"></i> Standard 1 to 5</li>
+                                <li><i class="fa fa-check-square"></i> B.A.</li>
+                                <li><i class="fa fa-check-square"></i> B.Ed.</li>
+                                <li><i class="fa fa-check-square"></i> MLT</li>
+                                <li><i class="fa fa-check-square"></i> M.S.W.</li>
+                                <li><i class="fa fa-check-square"></i> B.Sc. IT</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="servicesHome-box">
+                            <ul style="color:white">
+                                <li><i class="fa fa-check-square"></i> Standard 6 to 8</li>
+                                <li><i class="fa fa-check-square"></i> B.B.A.</li>
+                                <li><i class="fa fa-check-square"></i> B.P.Ed.</li>
+                                <li><i class="fa fa-check-square"></i> M.A.</li>
+                                <li><i class="fa fa-check-square"></i> M.Sc.</li>
+                                <li><i class="fa fa-check-square"></i> View All</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="servicesHome-box">
+                            <ul style="color:white">
+                                <li><i class="fa fa-check-square"></i> Standard 9 to 10</li>
+                                <li><i class="fa fa-check-square"></i> B.C.A.</li>
+                                <li><i class="fa fa-check-square"></i> B.S.W.</li>
+                                <li><i class="fa fa-check-square"></i> M.Com.</li>
+                                <li><i class="fa fa-check-square"></i> P.T.C.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
 <div class="full-width-header header-style1 home1-modifiy">
     <header id="rs-header" class="rs-header">
         <div class="topbar-area dark-parimary-bg">
@@ -33,24 +97,28 @@
             </div>
         </div>
         <div class="menu-area menu-sticky">
-            <div class="row y-middle">
+            <div class="row middle">
                 <div class="col-lg-7 col-md-12 col-sm-12">
                     <div class="logo-cat-wrap">
                         <div class="logo-part">
-                            <a href="index.html">
+                            <a routerLink="/landing/main" routerLinkActive="active">
                                 <img src="assets/images/CES_logo.png" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 text-end m1" style="padding-right:30px;">
+                <div class="col-lg-5 text-start m1" style="padding-right:30px;">
 
                     <ul class="topbar-right">
                         <li class="menu-item lm">
                             <div class="wrap">
                                 <div class="search">
-                                    <input type="text" class="searchTerm" placeholder="What are you looking for?"
-                                        style="color: #203154;">
+                                    <a class="card-link collapsed" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" href="#" (click)="moreOpen()"
+                                        aria-expanded="true">
+                                        <input type="text" class="searchTerm" placeholder="What are you looking for?"
+                                            style="color: #203154;">
+                                    </a>
                                     <button type="submit" class="searchButton">
                                         <i class="fa fa-search"></i>
                                     </button>
@@ -59,15 +127,15 @@
                         </li>
 
                         <li class="menu-item lm">
-                            <a href="#">Centenary Celebration</a>
+                            <a (click)="openPopup()">Centenary Celebration</a>
                         </li>
                         |
                         <li class="menu-item lm">
-                            <a href="#">News</a>
+                            <a (click)="openPopup1()">News</a>
                         </li>
                         |
                         <li class="menu-item lm">
-                            <a href="#">Birthday</a>
+                            <a (click)="openPopup2()">Birthday</a>
                         </li>
                         |
                         <li class="menu-item lm">
@@ -78,19 +146,21 @@
                 </div>
             </div>
         </div>
+
         <!-- MOBILEMENU -->
         <nav class="navbar navbarn navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
                 aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation"
                 (click)="isCollapsed = !isCollapsed">
-                <span class="navbar-toggler-icon"></span>
+                <!-- <span class="navbar-toggler-icon"> </span> -->
+                <img class="navbar-toggler-icon" src="assets/images/shape/icon.png" alt="">
             </button>
 
             <div class="collapse navbar-collapse" id="navbarColor03" [ngbCollapse]="isCollapsed">
                 <ul class="nav-menu" style="padding: 25px!important;">
                     <!-- Large button groups (default and split) -->
-                    
+
                     <!-- <li class="btn-group">
                         <a  class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">Home</a>
@@ -101,65 +171,83 @@
                         </ul>
                     </li> -->
                     <li class="btn-group">
-                        <a  class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Home</a>
-                        <ul  class="dropdown-menu">
-                            <li><a class="dropdown-item" routerLink="/basic/about" routerLinkActive="active">About Us</a> </li>
-                            <li><a class="dropdown-item" routerLink="/basic/history" routerLinkActive="active">History</a> </li>
-                            <li><a class="dropdown-item" routerLink="/basic/management" routerLinkActive="active">Management</a> </li>
+                        <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" routerLink="/landing/main" routerLinkActive="active">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/basic/about" routerLinkActive="active">About
+                                    Us</a> </li>
+                            <li><a class="dropdown-item" routerLink="/basic/history"
+                                    routerLinkActive="active">History</a> </li>
+                            <li><a class="dropdown-item" routerLink="/basic/management"
+                                    routerLinkActive="active">Management</a> </li>
                         </ul>
                     </li>
                     <li class="btn-group">
-                        <a  class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Glory of CES</a>
-                        <ul  class="dropdown-menu">
-                            <li><a  class="dropdown-item" routerLink="/glory/old" routerLinkActive="active">Old Gallery</a> </li>
+                        <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Glory of CES</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/glory/old" routerLinkActive="active">Old
+                                    Gallery</a> </li>
                         </ul>
                     </li>
 
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Gallery/Media</a>
+                            aria-expanded="false">Gallery/Media</a>
 
-                        <ul  class="dropdown-menu">
-                            <li><a  class="dropdown-item">Photos</a> </li>
-                            <li><a  class="dropdown-item">Documentary Film</a> </li>
-                            <li><a  class="dropdown-item">Our Magazine Balmitra</a> </li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item">Photos</a> </li>
+                            <li><a class="dropdown-item">Documentary Film</a> </li>
+                            <li><a class="dropdown-item">Our Magazine Balmitra</a> </li>
                         </ul>
                     </li>
 
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Project</a>
-                        <ul  class="dropdown-menu">
-                            <li><a  class="dropdown-item" routerLink="/project/setu" routerLinkActive="active">Project SETU</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/sangam" routerLinkActive="active">Project SANGAM</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/sandesh" routerLinkActive="active">Project SANDESH</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/aditya" routerLinkActive="active">Project ADITYA</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/varun" routerLinkActive="active">Project VARUN</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/eklavya" routerLinkActive="active">Project EKLAVYA</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/egyan" routerLinkActive="active">Project E-GYAN</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/arjun" routerLinkActive="active">Project ARJUN</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/project/anandam" routerLinkActive="active">Project ANANDAM</a> </li>
+                            aria-expanded="false">Project</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/project/setu" routerLinkActive="active">Project
+                                    SETU</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/sangam" routerLinkActive="active">Project
+                                    SANGAM</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/sandesh" routerLinkActive="active">Project
+                                    SANDESH</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/aditya" routerLinkActive="active">Project
+                                    ADITYA</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/varun" routerLinkActive="active">Project
+                                    VARUN</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/eklavya" routerLinkActive="active">Project
+                                    EKLAVYA</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/egyan" routerLinkActive="active">Project
+                                    E-GYAN</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/arjun" routerLinkActive="active">Project
+                                    ARJUN</a> </li>
+                            <li><a class="dropdown-item" routerLink="/project/anandam" routerLinkActive="active">Project
+                                    ANANDAM</a> </li>
                         </ul>
 
                     </li>
 
                     <li class="btn-group">
                         <a class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">Academic</a>
-                        <ul  class="dropdown-menu">
-                            <li><a  class="dropdown-item" routerLink="/academic/school" routerLinkActive="active">Schools</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/academic/colleges" routerLinkActive="active">Collages</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/academic/others" routerLinkActive="active">Others</a> </li>
-                            <li><a  class="dropdown-item" routerLink="/academic/hostels" routerLinkActive="active">Hostels</a> </li>
+                            aria-expanded="false">Academic</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" routerLink="/academic/school"
+                                    routerLinkActive="active">Schools</a> </li>
+                            <li><a class="dropdown-item" routerLink="/academic/colleges"
+                                    routerLinkActive="active">Collages</a> </li>
+                            <li><a class="dropdown-item" routerLink="/academic/others"
+                                    routerLinkActive="active">Others</a> </li>
+                            <li><a class="dropdown-item" routerLink="/academic/hostels"
+                                    routerLinkActive="active">Hostels</a> </li>
                         </ul>
                     </li>
                     <li class="btn-group">
                         <a class="btn btn-lg" routerLink="/basic/alumni" routerLinkActive="active">Alumani</a>
                     </li>
                     <li class="btn-group">
-                        <a class="btn btn-lg" routerLink="/basic/fund" routerLinkActive="active">Rahatotkarsh Fund</a>
+                        <a class="btn btn-lg" routerLink="/basic/fund" routerLinkActive="active">Rahatotkarsh
+                            Fund</a>
                     </li>
                 </ul>
 
@@ -169,201 +257,208 @@
 
         <div class="menu-area menu-sticky">
             <!-- main-menu -->
-            <div class="container" style="max-width:1750px;">
-                <div class="row y-middle" style="background-color: #203154 ; height: 50px;">
-                    <div class="col-lg-12 text-end">
-                        <div class="rs-menu-area">
-                            <div class="main-menu">
+            <div class="topbar-area dark-parimary-bg">
+                <div class="container" style="max-width:1750px;">
+                    <div class="row y-middle" style="background-color: #203154 ; height: 50px;">
+                        <div class="col-lg-12 text-end">
+                            <div class="rs-menu-area">
+                                <div class="main-menu">
 
-                                <nav class="rs-menu">
-                                    <ul class="nav-menu">
-                                        <!-- <li class="rs-mega-menu mega-rs menu-item-has-children current-menu-item"> <a
-                                                href="index.html">Home</a> -->
+                                    <nav class="rs-menu">
+                                        <ul class="nav-menu">
+                                            <!-- <li class="rs-mega-menu mega-rs menu-item-has-children current-menu-item"> <a
+                                                    href="index.html">Home</a> -->
 
-                                        <!-- <ul class="mega-menu"> 
-                                            <li class="mega-menu-container">
-                                                <div class="mega-menu-innner">
-                                                    <div class="single-megamenu">
-                                                        <ul class="sub-menu">
-                                                            <li><a href="index.html">Main Demo</a> </li>
-                                                            <li class="active"><a href="index2.html">Online Course</a> </li>
-                                                            <li><a href="index3.html">University 01</a> </li>
-                                                            <li><a href="index4.html">E-Learning</a> </li>
-                                                            <li><a href="index5.html">Distance Learning</a> </li>
-                                                        </ul>
+                                            <!-- <ul class="mega-menu"> 
+                                                <li class="mega-menu-container">
+                                                    <div class="mega-menu-innner">
+                                                        <div class="single-megamenu">
+                                                            <ul class="sub-menu">
+                                                                <li><a href="index.html">Main Demo</a> </li>
+                                                                <li class="active"><a href="index2.html">Online Course</a> </li>
+                                                                <li><a href="index3.html">University 01</a> </li>
+                                                                <li><a href="index4.html">E-Learning</a> </li>
+                                                                <li><a href="index5.html">Distance Learning</a> </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="single-megamenu">
+                                                            <ul class="sub-menu last-sub-menu">
+                                                                <li><a href="index6.html">Personal Demo</a> </li>
+                                                                <li><a href="index7.html">Online Training</a> </li>
+                                                                <li><a href="index8.html">Online Learning</a> </li>
+                                                                <li><a href="index9.html">Kitchen Coach</a> </li>
+                                                                <li><a href="index10.html">University 02</a> </li>
+                                                            </ul>
+                                                        </div>  
+                                                        <div class="single-megamenu">
+                                                            <ul class="sub-menu last-sub-menu">
+                                                                <li><a href="index11.html">Kindergarten 01</a> </li>
+                                                                <li><a href="index12.html">Freelancing Course</a> </li>
+                                                                <li><a href="index13.html">Gym Coach</a> </li>
+                                                                <li><a href="index14.html">Courses Archive</a> </li>
+                                                                <li><a href="index15.html">Courses Hub</a> </li>
+                                                            </ul>
+                                                        </div> 
                                                     </div>
-                                                    <div class="single-megamenu">
-                                                        <ul class="sub-menu last-sub-menu">
-                                                            <li><a href="index6.html">Personal Demo</a> </li>
-                                                            <li><a href="index7.html">Online Training</a> </li>
-                                                            <li><a href="index8.html">Online Learning</a> </li>
-                                                            <li><a href="index9.html">Kitchen Coach</a> </li>
-                                                            <li><a href="index10.html">University 02</a> </li>
-                                                        </ul>
-                                                    </div>  
-                                                    <div class="single-megamenu">
-                                                        <ul class="sub-menu last-sub-menu">
-                                                            <li><a href="index11.html">Kindergarten 01</a> </li>
-                                                            <li><a href="index12.html">Freelancing Course</a> </li>
-                                                            <li><a href="index13.html">Gym Coach</a> </li>
-                                                            <li><a href="index14.html">Courses Archive</a> </li>
-                                                            <li><a href="index15.html">Courses Hub</a> </li>
-                                                        </ul>
-                                                    </div> 
-                                                </div>
+                                                </li>
+                                            </ul> -->
+                                            <!-- //.mega-menu -->
+                                            <!-- </li> -->
+                                            <li class="menu-item-has-children">
+                                                <a routerLink="/landing/main" routerLinkActive="active">Home</a>
+                                                <ul class="sub-menu">
+                                                    <li><a routerLink="/basic/about" routerLinkActive="active">About
+                                                            Us</a>
+                                                    </li>
+                                                    <li><a routerLink="/basic/history"
+                                                            routerLinkActive="active">History</a>
+                                                    </li>
+                                                    <li><a routerLink="/basic/management"
+                                                            routerLinkActive="active">Management</a> </li>
+                                                </ul>
                                             </li>
-                                        </ul> -->
-                                        <!-- //.mega-menu -->
-                                        <!-- </li> -->
-                                        <li class="menu-item-has-children">
-                                            <a routerLink="/landing/main" routerLinkActive="active">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a routerLink="/basic/about" routerLinkActive="active">About Us</a>
-                                                </li>
-                                                <li><a routerLink="/basic/history" routerLinkActive="active">History</a>
-                                                </li>
-                                                <li><a routerLink="/basic/management"
-                                                        routerLinkActive="active">Management</a> </li>
-                                            </ul>
-                                        </li>
 
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Glory of CES</a>
-                                            <ul class="sub-menu">
-                                                <li><a routerLink="/glory/old" routerLinkActive="active">Old Gallery</a>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Glory of CES</a>
+                                                <ul class="sub-menu">
+                                                    <li><a routerLink="/glory/old" routerLinkActive="active">Old
+                                                            Gallery</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
 
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Gallery/Media</a>
-                                            <!-- <ul class="sub-menu">
-                                             <li class="menu-item-has-children right">
-                                                 <a href="#">Team</a>
-                                                 <ul class="sub-menu right">
-                                                     <li><a href="team.html">Team One</a></li>
-                                                     <li><a href="team2.html">Team Two</a></li>
-                                                     <li><a href="team-single.html">Team Single</a></li>
-                                                 </ul>
-                                             </li>
-                                             <li class="menu-item-has-children">
-                                                 <a href="#">Event</a>
-                                                 <ul class="sub-menu right">
-                                                     <li><a href="events-style1.html">Event One</a></li>
-                                                     <li><a href="events-style2.html">Event Two</a></li>
-                                                     <li><a href="events-style3.html">Event Three</a></li>
-                                                 </ul>
-                                             </li>
-                                             <li class="menu-item-has-children">
-                                                 <a href="#">Gallery</a>
-                                                 <ul class="sub-menu right">
-                                                     <li><a href="gallery-style1.html">Gallery One</a></li>
-                                                     <li><a href="gallery-style2.html">Gallery Two</a></li>
-                                                     <li><a href="gallery-style3.html">Gallery Three</a></li>
-                                                 </ul>
-                                             </li>
-                                             <li class="menu-item-has-children">
-                                                 <a href="#">Shop</a>
-                                                 <ul class="sub-menu right">
-                                                     <li><a href="shop.html">Shop</a></li>
-                                                     <li><a href="shop-single.html">Shop Single</a></li>
-                                                     <li><a href="cart.html">Cart</a></li>
-                                                     <li><a href="checkout.html">Checkout</a></li>
-                                                 </ul>
-                                             </li>
-                                             <li class="menu-item-has-children">
-                                                 <a href="#">Others</a>
-                                                 <ul class="sub-menu right">
-                                                     <li><a href="faq.html">FAQ</a></li>
-                                                     <li><a href="error.html">404 Page</a></li>
-                                                     <li><a href="login.html">Login</a></li>
-                                                     <li><a href="register.html">Register</a></li>
-                                                 </ul>
-                                             </li>
-                                         </ul> -->
-                                            <ul class="sub-menu">
-                                                <li><a href="#">Photos</a> </li>
-                                                <li><a href="#">Documentary Film</a> </li>
-                                                <li><a href="#">Our Magazine Balmitra</a> </li>
-                                            </ul>
-                                        </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Gallery/Media</a>
+                                                <!-- <ul class="sub-menu">
+                                                 <li class="menu-item-has-children right">
+                                                     <a href="#">Team</a>
+                                                     <ul class="sub-menu right">
+                                                         <li><a href="team.html">Team One</a></li>
+                                                         <li><a href="team2.html">Team Two</a></li>
+                                                         <li><a href="team-single.html">Team Single</a></li>
+                                                     </ul>
+                                                 </li>
+                                                 <li class="menu-item-has-children">
+                                                     <a href="#">Event</a>
+                                                     <ul class="sub-menu right">
+                                                         <li><a href="events-style1.html">Event One</a></li>
+                                                         <li><a href="events-style2.html">Event Two</a></li>
+                                                         <li><a href="events-style3.html">Event Three</a></li>
+                                                     </ul>
+                                                 </li>
+                                                 <li class="menu-item-has-children">
+                                                     <a href="#">Gallery</a>
+                                                     <ul class="sub-menu right">
+                                                         <li><a href="gallery-style1.html">Gallery One</a></li>
+                                                         <li><a href="gallery-style2.html">Gallery Two</a></li>
+                                                         <li><a href="gallery-style3.html">Gallery Three</a></li>
+                                                     </ul>
+                                                 </li>
+                                                 <li class="menu-item-has-children">
+                                                     <a href="#">Shop</a>
+                                                     <ul class="sub-menu right">
+                                                         <li><a href="shop.html">Shop</a></li>
+                                                         <li><a href="shop-single.html">Shop Single</a></li>
+                                                         <li><a href="cart.html">Cart</a></li>
+                                                         <li><a href="checkout.html">Checkout</a></li>
+                                                     </ul>
+                                                 </li>
+                                                 <li class="menu-item-has-children">
+                                                     <a href="#">Others</a>
+                                                     <ul class="sub-menu right">
+                                                         <li><a href="faq.html">FAQ</a></li>
+                                                         <li><a href="error.html">404 Page</a></li>
+                                                         <li><a href="login.html">Login</a></li>
+                                                         <li><a href="register.html">Register</a></li>
+                                                     </ul>
+                                                 </li>
+                                             </ul> -->
+                                                <ul class="sub-menu">
+                                                    <li><a href="#">Photos</a> </li>
+                                                    <li><a href="#">Documentary Film</a> </li>
+                                                    <li><a href="#">Our Magazine Balmitra</a> </li>
+                                                </ul>
+                                            </li>
 
-                                        <li class="menu-item-has-children">
-                                            <a href="#">Project</a>
-                                            <ul class="sub-menu">
-                                                <li><a routerLink="/project/setu" routerLinkActive="active">Project
-                                                        SETU</a> </li>
-                                                <li><a routerLink="/project/sangam" routerLinkActive="active">Project
-                                                        SANGAM</a> </li>
-                                                <li><a routerLink="/project/sandesh" routerLinkActive="active">Project
-                                                        SANDESH</a> </li>
-                                                <li><a routerLink="/project/aditya" routerLinkActive="active">Project
-                                                        ADITYA</a> </li>
-                                                <li><a routerLink="/project/varun" routerLinkActive="active">Project
-                                                        VARUN</a> </li>
-                                                <li><a routerLink="/project/eklavya" routerLinkActive="active">Project
-                                                        EKLAVYA</a> </li>
-                                                <li><a routerLink="/project/egyan" routerLinkActive="active">Project
-                                                        E-GYAN</a> </li>
-                                                <li><a routerLink="/project/arjun" routerLinkActive="active">Project
-                                                        ARJUN</a> </li>
-                                                <li><a routerLink="/project/anandam" routerLinkActive="active">Project
-                                                        ANANDAM</a> </li>
-                                            </ul>
-                                            <!-- <ul class="sub-menu">
-                                             <li><a href="blog.html">Blog</a></li>
-                                             <li class="menu-item-has-children">
-                                                 <a href="#">Blog Sidebar</a>
-                                                 <ul class="sub-menu right">
-                                                     <li><a href="blog-left.html">Blog Left Sidebar</a></li>
-                                                     <li><a href="blog-right.html">Blog Right Sidebar</a></li>
-                                                 </ul>
-                                             </li>
-                                             <li class="menu-item-has-children">
-                                                 <a href="#">Single Post</a>
-                                                 <ul class="sub-menu right">
-                                                     <li><a href="blog-post-left.html">Post Left Sidebar</a></li>
-                                                     <li><a href="blog-post-right.html">Post Right Sidebar</a></li>
-                                                     <li><a href="blog-single.html">Full Width Post</a></li>
-                                                 </ul>
-                                             </li>
-                                         </ul> -->
-                                        </li>
+                                            <li class="menu-item-has-children">
+                                                <a href="#">Project</a>
+                                                <ul class="sub-menu">
+                                                    <li><a routerLink="#setu" routerLinkActive="active">Project
+                                                            SETU</a> </li>
+                                                    <li><a routerLink="#sangam" routerLinkActive="active">Project
+                                                            SANGAM</a> </li>
+                                                    <li><a routerLink="#sandesh" routerLinkActive="active">Project
+                                                            SANDESH</a> </li>
+                                                    <li><a routerLink="#aditya" routerLinkActive="active">Project
+                                                            ADITYA</a> </li>
+                                                    <li><a routerLink="#varun" routerLinkActive="active">Project
+                                                            VARUN</a> </li>
+                                                    <li><a routerLink="#eklavya" routerLinkActive="active">Project
+                                                            EKLAVYA</a> </li>
+                                                    <li><a routerLink="#egyan" routerLinkActive="active">Project
+                                                            E-GYAN</a> </li>
+                                                    <li><a routerLink="#arjun" routerLinkActive="active">Project
+                                                            ARJUN</a> </li>
+                                                    <li><a routerLink="#anandam" routerLinkActive="active">Project
+                                                            ANANDAM</a> </li>
+                                                </ul>
+                                                <!-- <ul class="sub-menu">
+                                                 <li><a href="blog.html">Blog</a></li>
+                                                 <li class="menu-item-has-children">
+                                                     <a href="#">Blog Sidebar</a>
+                                                     <ul class="sub-menu right">
+                                                         <li><a href="blog-left.html">Blog Left Sidebar</a></li>
+                                                         <li><a href="blog-right.html">Blog Right Sidebar</a></li>
+                                                     </ul>
+                                                 </li>
+                                                 <li class="menu-item-has-children">
+                                                     <a href="#">Single Post</a>
+                                                     <ul class="sub-menu right">
+                                                         <li><a href="blog-post-left.html">Post Left Sidebar</a></li>
+                                                         <li><a href="blog-post-right.html">Post Right Sidebar</a></li>
+                                                         <li><a href="blog-single.html">Full Width Post</a></li>
+                                                     </ul>
+                                                 </li>
+                                             </ul> -->
+                                            </li>
 
-                                        <li class="menu-item-has-children">
-                                            <a href="contact.html">Academic</a>
-                                            <ul class="sub-menu">
-                                                <li><a routerLink="/academic/school"
-                                                        routerLinkActive="active">Schools</a> </li>
-                                                <li><a routerLink="/academic/colleges"
-                                                        routerLinkActive="active">Collages</a> </li>
-                                                <li><a routerLink="/academic/others"
-                                                        routerLinkActive="active">Others</a> </li>
-                                                <li><a routerLink="/academic/hostels"
-                                                        routerLinkActive="active">Hostels</a> </li>
-                                            </ul>
-                                        </li>
-                                        <li class="">
-                                            <a routerLink="/basic/alumni" routerLinkActive="active">Alumani</a>
-                                        </li>
-                                        <li class="">
-                                            <a routerLink="/basic/fund" routerLinkActive="active">Rahatotkarsh Fund</a>
-                                        </li>
-                                    </ul> <!-- //.nav-menu -->
-                                </nav>
-                            </div> <!-- //.main-menu -->
+                                            <li class="menu-item-has-children">
+                                                <a href="contact.html">Academic</a>
+                                                <ul class="sub-menu">
+                                                    <li><a routerLink="/academic/school"
+                                                            routerLinkActive="active">Schools</a> </li>
+                                                    <li><a routerLink="/academic/colleges"
+                                                            routerLinkActive="active">Collages</a> </li>
+                                                    <li><a routerLink="/academic/others"
+                                                            routerLinkActive="active">Others</a> </li>
+                                                    <li><a routerLink="/academic/hostels"
+                                                            routerLinkActive="active">Hostels</a> </li>
+                                                </ul>
+                                            </li>
+                                            <li class="">
+                                                <a routerLink="/basic/alumni" routerLinkActive="active">Alumani</a>
+                                            </li>
+                                            <li class="">
+                                                <a routerLink="/basic/fund" routerLinkActive="active">Rahatotkarsh
+                                                    Fund</a>
+                                            </li>
+                                        </ul> <!-- //.nav-menu -->
+                                    </nav>
+                                </div> <!-- //.main-menu -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- main-menu -->
             <!-- stickymenu -->
             <div style="max-width:100%;">
                 <div class="secondToolbar" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
                     <!-- <img src="assets/images/CES_logo.png" alt=""> -->
                     <div class="row" style="background-color: #203154 ; height: 50px;">
-                        <div class="col-lg-2 text-end">
-                            <img src="assets/images/ces.png" alt="" width="42%">
+                        <div class="col-lg-2 text-end mt-10">
+                            <img src="assets/images/ces.png" alt="" width="35%">
                         </div>
                         <div class="col-lg-10 text-start" style="margin-top: 5px;">
                             <div class="rs-menu-area jc">
@@ -516,8 +611,178 @@
 
             <!-- stickymenu -->
         </div>
+        <!-- Button trigger modal-->
 
+        <!--Modal: modalCookie-->
+        <div class="modal top" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+            <div class="modal-dialog modal-frame modal-top modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <div class="modal-title  pt-10">
+                        <h2>Centenary Celebration</h2>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="row d-flex justify-content-center align-items-center">
 
+                            <div class="intro-info-tabs intro-section gray-bg " style="margin-top: 5px;">
+                                <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                                    <li class="nav-item tab-btns" role="presentation">
+                                        <a class="nav-link tab-btn active" id="prod-overview-tab" data-bs-toggle="tab"
+                                            href="#" data-bs-target="#prod-overview" role="tab"
+                                            aria-controls="prod-overview" aria-selected="true">English</a>
+                                    </li>
+                                    <li class="nav-item tab-btns" role="presentation">
+                                        <a class="nav-link tab-btn" id="prod-curriculum-tab" data-bs-toggle="tab"
+                                            href="#" data-bs-target="#prod-curriculum" role="tab"
+                                            aria-controls="prod-curriculum" aria-selected="false">Gujarati</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content tabs-content pt-20" id="myTabContent">
+                                    <div class="tab-pane tab fade show active" id="prod-overview" role="tabpanel"
+                                        aria-labelledby="prod-overview-tab">
+
+                                        <div class="blog-full">
+                                            <div class="blog-desc">
+                                                <p>Charotar Education Society (CES) began its journey 100 years back
+                                                    with an intention to provide students with quality education and the
+                                                    same passion continues now and would continue for generations to
+                                                    come. To mark this occasion CES decide to organize 100 different
+                                                    events as “Shatakotsav” - The Centenary Celebration, under
+                                                    categories like academic, social, health, sports, fair, festival etc
+                                                    during year span of April 2015 to April 2016 with the aim to raise
+                                                    intelligent, emotional and spiritual quotient of the students.
+                                                </p>
+                                                <p>CES hits Eight Guinness World Records for Mahendi, Quiz, Sudoku, Kite
+                                                    Mosaic, Human Maths Equation Representation, Signature campaign,
+                                                    Arm-Linked Students and T-Shirt Signature. The achievement is the
+                                                    proud moment for the entire academic fraternity of Gujarat. CES also
+                                                    found place in the United Nations for its effort to spread awareness
+                                                    about the need for action against environmental degradation.
+                                                    Organizing the Centenary Year celebrations at this magnitude would
+                                                    not have been possible without the motto of ‘Institution First’ and
+                                                    team work.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="prod-curriculum" role="tabpanel"
+                                        aria-labelledby="prod-curriculum-tab">
+                                        <div class="content">
+                                            <div id="accordion" class="accordion-box">
+                                                <div class="blog-full">
+                                                    <div class="blog-desc">
+                                                        <p>ઉચ્ચ ગુણવત્તાયુક્ત અભ્યાસના ધ્યેય સાથે શરૂ થયેલ ચરોતર
+                                                            એજ્યુકેશન સોસાયટીની સો (૧૦૦) વર્ષની યાત્રા આજે પણ એજ ઉત્સાહ
+                                                            અને ખંતથી ચાલી રહી છે અને આવનારા સમયમાં પણ ચાલતી રહેશે. સો
+                                                            વર્ષની આ યાત્રાની ઉજવણીના ભાગરૂપે “ શતકોત્સવ ” પર્વમાં
+                                                            શૈક્ષણિક, રમત-ગમત,સ્વસ્થ, સામાજીક, ઉત્સવ, મેળા વગેરે જેવી
+                                                            શ્રેણીઓમાં વિવિધ સો(૧૦૦) કાર્યક્રમોનું અદભુત આયોજન કરવામાં
+                                                            આવ્યું. અપ્રિલ ૨૦૧૫ થી અપ્રિલ ૨૦૧૬ દરમ્યાન ઉજવાયેલ આ
+                                                            કાર્યક્રમોનો હેતુ વિદ્યાર્થીઓનો સર્જનાત્મક, ભાવનાત્મક,
+                                                            બુદ્ધિમત તથા આધ્યાત્મિક આંક ઉચો લાવવાનો રહ્યો.
+                                                        </p>
+                                                        <p>આ કાર્યક્રમો દરમ્યાન ચરોતર એજ્યુકેશન સોસાયટીએ આઠ ગિનિસ વર્લ્ડ
+                                                            રેકોર્ડ પ્રસ્થાપિત કર્યા, જે શિક્ષણ જગત માટે સીમાચિહ્નનરૂપ
+                                                            ધટના બની રહી છે. મહેંદી, ક્વીઝ, સુડોકુ, કાઈટ મોઝેઈક, માનવ
+                                                            ગણિત સમીકર, સહી ઝુંબેશ, માનવ સાંકળ તથા ટી-શર્ટ સહી અભિયાન
+                                                            જેવા વર્લ્ડ રેકોર્ડ્સ વિદ્યાર્થીઓ તથા સ્ટાફના સંયુક્ત
+                                                            પ્રયાસો દ્વારા રચવામાં આવ્યા. પર્યાવરણ બચાવવાના ઉદ્દાત
+                                                            ઉદ્દેશમાં યુનાઇટેડ નેશન્સ પણ ચરોતર એજ્યુકેશન સોસાયટીની સાથે
+                                                            જોડાયું. </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" (click)="closePopup()">
+                            Close
+                        </button>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: modalCookie-->
+
+        <!--Modal: modalRelatedContent-->
+        <div class="modal right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle1}">
+            <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading">TODAY'S NEWS / EVENTS</p>
+
+                        <button type="button" class="close" (click)="closePopup()">
+                            <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                               <h5>SHRI ALPESH N. PATEL POST GRADUATE INSTITUTE OF SCIENCE AND RESEARCH, ANAND</h5>
+
+                                <p><strong>UNIVERSITY TOPPERS OF M.SC. MLT AND DMLT DEPARTMENT</strong></p>
+                                <p><a href="http://www.cesociety.in/sanppgi/images/news/MLT%20Final%20RESULT%20with%20university%20rank%20%20IT%20CELL.pdf" target="_blank"> M.SC MT (CLT) & DMLT
+                                    RESULT (2020 – 22)</a></p>
+                                <button type="button" class="btn btn-info btn-md" (click)="closePopup()">Close</button>
+                            </div>
+
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: modalRelatedContent-->
+         <!--Modal: modalRelatedContent-->
+         <div class="modal right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle2}">
+            <div class="modal-dialog modal-left modal-bottom-right modal-notify modal-info" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading">BIRTHDAY</p>
+
+                        <button type="button" class="close" (click)="closePopup()">
+                            <span aria-hidden="true" class="white-text">&times;</span>
+                        </button>
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+
+                                <p><strong>NISHA VAGHELA (Assistant Teacher At Sardar Vallabhbhai Patel Shishuvihar And Balshala, Khetiwadi)</strong></p>
+                                
+                                <button type="button" class="btn btn-info btn-md" (click)="closePopup()">Close</button>
+                            </div>
+
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: modalRelatedContent-->
     </header>
 
 </div>

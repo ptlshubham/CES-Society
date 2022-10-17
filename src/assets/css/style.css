@@ -480,6 +480,12 @@ blockquote p {
   align-items: center;
   justify-content:flex-end;
 }
+.middle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
 .y-bottom {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -1321,9 +1327,9 @@ ul.listing-style.modify li:before {
   color: #ffffff;
 }
 .sec-title2 .title {
-  font-size: 42px;
+  font-size: 32px;
   line-height: 52px;
-  font-weight: 800;
+  /* font-weight: 800; */
   color: #031a3d;
 }
 .sec-title2 .title.white-color {
@@ -8181,13 +8187,14 @@ body .modal-backdrop {
 .why-choose-us.style2 .facilities-two .content-part {
   display: flex;
   align-items: center;
+  margin-bottom: -37px;
 }
 .why-choose-us.style2 .facilities-two .content-part .icon-part {
-  width: 80px;
-  line-height: 80px;
+  /* width: 80px; */
+  line-height: 79px;
   text-align: center;
   border-radius: 50%;
-  margin-right: 20px;
+  margin-right: 8px;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -8211,9 +8218,9 @@ body .modal-backdrop {
   transform: scale(0.9);
 }
 .why-choose-us.style2 .facilities-two .content-part .text-part .title {
-  font-size: 22px;
+  font-size: 16px;
   line-height: 32px;
-  font-weight: 800;
+  /* font-weight: 800; */
   color: #4e49a1;
   margin-bottom: 0;
 }
