@@ -6,6 +6,7 @@ import { AppRoutes } from './app.routing';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   imports: [
     BrowserModule,
     NgbModule,
+    HttpClientModule,
     RouterModule.forRoot(AppRoutes, {
       useHash: true
     }),
